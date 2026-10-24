@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ketentuan 2: Viewport meta tag untuk responsivitas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        /* --- KETENTUAN 5: TAMPILAN CSS (TEMA TERANG) --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --header-bg: #4f46e5;
+            --header-text: #ffffff;
+            --card-bg: #f3f4f6;
+            --card-border: #e5e7eb;
+            --btn-bg: #4f46e5;
+            --btn-text: #ffffff;
+        }
+
+        /* Kelas untuk Tema Gelap (Ketentuan 4) */
+        .dark-theme {
+            --bg-color: #1f2937;
+            --text-color: #f9fafb;
+            --header-bg: #111827;
+            --header-text: #ffffff;
+            --card-bg: #374151;
+            --card-border: #4b5563;
+            --btn-bg: #3b82f6;
+            --btn-text: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Ketentuan 1 & 2: Header dan Container Relatif (%) */
+        header {
+            background-color: var(--header-bg);
+            color: var(--header-text);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Bagian Profil */
+        .profile-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            /* Ketentuan 2: Gambar tidak melebihi lebar container */
+            max-width: 100%; 
+            border: 3px solid var(--header-bg);
+        }
+
+        .profile-desc {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+
+        /* Tombol Aksi */
+        .btn-container {
+            margin-top: 1.5rem;
+        }
+
+        button {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* Bagian Hobi / Keterampilan */
+        .skills-heading {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--btn-bg);
+        }
+
+        /* --- KETENTUAN 3: CSS MEDIA QUERIES --- */
+        /* Layar kurang dari 768px: Kartu ditampilkan dalam 1 kolom */
+        @media (max-width: 767px) {
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* Layar minimal 768px: Kartu ditampilkan dalam 3 kolom */
+        @media (min-width: 768px) {
+            .card {
+                flex: 1 1 calc(33.333% - 1rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ketentuan 1: Header -->
+    <header>
+        <h1>Profil Digital Saya</h1>
+    </header>
+
+    <div class="container">
+        <!-- Ketentuan 1: Bagian Profil -->
+        <section class="profile-section">
+            <!-- Menggunakan ilustrasi avatar placeholder standar -->
+            <img src="https://dicebear.com" alt="Foto Profil" class="profile-img">
+            <h2>Halo, Saya Adi Wijaya</h2>
+            <p class="profile-desc">Saya adalah seorang pelajar yang sedang mendalami dunia pembuatan website dan pemrograman web responsif.</p>
+            
+            <!-- Ketentuan 1: Tombol Ubah Teks dan Ganti Tema -->
+            <div class="btn-container">
+                <button id="btn-ubah-teks">Ubah Teks</button>
+                <button id="btn-ganti-tema">Ganti Tema</button>
+            </div>
+        </section>
+
+        <!-- Ketentuan 1: Bagian Hobi atau Keterampilan -->
+        <section>
+            <h2 class="skills-heading">Hobi & Keterampilan</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Web Design</h3>
+                    <p>Menyusun tata letak halaman web menggunakan struktur HTML dan mempercantiknya dengan CSS.</p>
+                </div>
+                <div class="card">
+                    <h3>Fotografi</h3>
+                    <p>Mengabadikan momen pemandangan alam dan human interest di sekitar lingkungan tempat tinggal.</p>
+                </div>
+                <div class="card">\b 
+                    <h3>Membaca</h3>
+                    <p>Mengeksplorasi buku-buku bertema teknologi digital dan perkembangan kecerdasan buatan.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- --- KETENTUAN 4: MANIPULASI DOM DAN EVENT LISTENER --- -->
+    <script>
+        // Menggunakan querySelector() untuk mengambil elemen
+        const btnUbahTeks = document.querySelector('#btn-ubah-teks');
+        const btnGantiTema = document.querySelector('#btn-ganti-tema');
+        const deskripsiProfil = document.querySelector('.profile-section p');
+
+        // Event Listener untuk Tombol Ubah Teks
+        btnUbahTeks.addEventListener('click', function() {
+            // Mengubah deskripsi teks menggunakan textContent
+            deskripsiProfil.textContent = "Teks telah berhasil diubah! Saat ini saya sedang fokus melatih kemampuan JavaScript dasar dan manipulasi DOM.";
+        });
+
+        // Event Listener untuk Tombol Ganti Tema
+        btnGantiTema.addEventListener('click', function() {
+            // Menggunakan classList.toggle() untuk mengaktifkan/matikan tema gelap
+            document.body.classList.toggle('dark-theme');
+        });
+    </script> 
+</body>
+</html>
+

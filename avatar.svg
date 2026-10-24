@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Ilustrasi foto profil">
+  <rect width="400" height="400" fill="#1f6f5c"/>
+  <circle cx="200" cy="160" r="70" fill="#f2d7bd"/>
+  <path d="M60 400c0-86 62-140 140-140s140 54 140 140z" fill="#eef3f1"/>
+  <path d="M130 150c0-48 32-72 70-72s70 24 70 72c-20-30-50-42-70-42s-50 12-70 42z" fill="#12352d"/>
+</svg>
